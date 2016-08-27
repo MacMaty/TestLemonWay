@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using System.Xml;
 
 namespace WsLemonWay
 {
@@ -16,11 +18,23 @@ namespace WsLemonWay
     // [System.Web.Script.Services.ScriptService]
     public class WS_LemonWay : System.Web.Services.WebService
     {
-
         [WebMethod]
-        public string HelloWorld()
+        public int Fibonacci(int n)
         {
-            return "Hello World";
+            if (n < 1 || n > 100) return -1;
+            if (n == 1 || n == 2) return 1;
+
+            var sqrt5 = Math.Sqrt(5);
+
+            var bigPhi = (sqrt5 + 1) / 2;
+            var miniPhi = bigPhi - 1;
+
+            var result = (Math.Pow(bigPhi, n) - Math.Pow(-miniPhi, n)) / sqrt5;
+
+            if (result > Int32.MaxValue)
+                throw new ArgumentOutOfRangeException("n", string.Format("Fib({0}) will cause a 32-bit integer overflow.", n));
+
+            return Convert.ToInt32(result);
         }
     }
 }
