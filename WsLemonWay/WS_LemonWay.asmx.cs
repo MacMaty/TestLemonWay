@@ -36,5 +36,25 @@ namespace WsLemonWay
 
             return Convert.ToInt32(result);
         }
+
+        [WebMethod]
+        public string XMLToJSON(string xml)
+        {
+            try
+            {
+                XmlDocument document = new XmlDocument();
+                // Load the XmlDocument with the XML.
+                document.LoadXml(xml);
+
+                // Convert XML to Json format
+                string jsonText = JsonConvert.SerializeXmlNode(document, Newtonsoft.Json.Formatting.Indented);
+
+                return jsonText;
+            }
+            catch (XmlException)
+            {
+                return "Bad Xml format";
+            }
+        }
     }
 }
