@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WsLemonWay", "WsLemonWay\WsLemonWay.csproj", "{87D69DA0-30B2-40B4-8C0C-D14510889144}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WsLemonWay.Tests", "WsLemonWay.Tests\WsLemonWay.Tests.csproj", "{5B4BA8FA-AE6C-4618-A589-6F4E84B8E8A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleLemonWay", "ConsoleLemonWay\ConsoleLemonWay.csproj", "{3DCB5527-E8E2-4AE1-91A7-9782082A7ADB}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87D69DA0-30B2-40B4-8C0C-D14510889144}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87D69DA0-30B2-40B4-8C0C-D14510889144}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87D69DA0-30B2-40B4-8C0C-D14510889144}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87D69DA0-30B2-40B4-8C0C-D14510889144}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B4BA8FA-AE6C-4618-A589-6F4E84B8E8A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B4BA8FA-AE6C-4618-A589-6F4E84B8E8A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B4BA8FA-AE6C-4618-A589-6F4E84B8E8A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B4BA8FA-AE6C-4618-A589-6F4E84B8E8A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DCB5527-E8E2-4AE1-91A7-9782082A7ADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DCB5527-E8E2-4AE1-91A7-9782082A7ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DCB5527-E8E2-4AE1-91A7-9782082A7ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DCB5527-E8E2-4AE1-91A7-9782082A7ADB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
