@@ -56,5 +56,18 @@ namespace WsLemonWay
                 return "Bad Xml format";
             }
         }
+
+
+        public  int NthFibonacciNumber(int n)
+        {
+            if ((n == 0) || (n == 1))
+            {
+                return n;
+            }
+            else
+            {
+                return (NthFibonacciNumber(n - 1) + NthFibonacciNumber(n - 2));
+            }
+        }
     }
 }

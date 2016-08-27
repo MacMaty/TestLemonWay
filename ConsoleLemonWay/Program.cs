@@ -10,6 +10,13 @@ namespace ConsoleLemonWay
     {
         static void Main(string[] args)
         {
+            //Init Webservice
+            WSLemonWay.WS_LemonWay ws = new WSLemonWay.WS_LemonWay();
+
+            //Call method 
+            Console.WriteLine(ws.Fibonacci(10));
+
+            Console.ReadLine();
         }
     }
 }
