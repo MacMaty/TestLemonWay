@@ -1,0 +1,16 @@
+*INFO       2016-08-28 12:50:32,486        MonitoringLogger          Application Start 
+*INFO       2016-08-28 12:52:57,226        MonitoringLogger          Application Start 
+*INFO       2016-08-28 12:53:09,941        MonitoringLogger          Test pour voir 
+*INFO       2016-08-28 12:56:52,772        MonitoringLogger          Application Start 
+*INFO       2016-08-28 12:57:41,088        MonitoringLogger          Application Start 
+*INFO       2016-08-28 12:57:51,081        MonitoringLogger          Test pour voir 
+*INFO       2016-08-28 13:01:48,685        MonitoringLogger          Application Start 
+*INFO       2016-08-28 13:02:00,218        MonitoringLogger          Start Fibonacci 
+*INFO       2016-08-28 13:02:00,218        MonitoringLogger          End Fibonacci 
+*INFO       2016-08-28 13:03:52,827        MonitoringLogger          Application Start 
+*INFO       2016-08-28 13:04:08,568        MonitoringLogger          Start Fibonacci 
+*INFO       2016-08-28 13:04:08,568        MonitoringLogger          End Fibonacci 
+*DEBUG      2016-08-28 13:04:08,568        MonitoringLogger          Value : 55 
+*INFO       2016-08-28 13:09:11,508        MonitoringLogger          Application Start 
+*INFO       2016-08-28 13:09:25,165        MonitoringLogger          Start Fibonacci 
+*ERROR      2016-08-28 13:09:25,166        MonitoringLogger          Fib(100) will cause a 32-bit integer overflow. 

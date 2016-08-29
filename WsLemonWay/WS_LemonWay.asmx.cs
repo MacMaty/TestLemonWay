@@ -1,8 +1,11 @@
-﻿using Newtonsoft.Json;
+﻿using log4net;
+using log4net.Config;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Script.Services;
 using System.Web.Services;
 using System.Xml;
 
@@ -19,8 +22,14 @@ namespace WsLemonWay
     public class WS_LemonWay : System.Web.Services.WebService
     {
         [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
         public int Fibonacci(int n)
         {
+            log4net.ThreadContext.Properties["log_who"] = Util.GetCurrentUser();
+            if (Log.MonitoringLogger.IsInfoEnabled)
+            {
+                Log.MonitoringLogger.Info("Start Fibonacci");
+            }
             if (n < 1 || n > 100) return -1;
             if (n == 1 || n == 2) return 1;
 
@@ -32,7 +41,24 @@ namespace WsLemonWay
             var result = (Math.Pow(bigPhi, n) - Math.Pow(-miniPhi, n)) / sqrt5;
 
             if (result > Int32.MaxValue)
-                throw new ArgumentOutOfRangeException("n", string.Format("Fib({0}) will cause a 32-bit integer overflow.", n));
+            {
+                var message = string.Format("Fib({0}) will cause a 32-bit integer overflow.", n);
+                if (Log.MonitoringLogger.IsErrorEnabled)
+                {
+                    Log.MonitoringLogger.Error(message);
+                }
+                throw new ArgumentOutOfRangeException("n", message);
+            }
+
+            if (Log.MonitoringLogger.IsDebugEnabled)
+            {
+                Log.MonitoringLogger.Debug(string.Format("Value : {0}", result));
+            }
+
+            if (Log.MonitoringLogger.IsInfoEnabled)
+            {
+                Log.MonitoringLogger.Info("End Fibonacci");
+            }
 
             return Convert.ToInt32(result);
         }
