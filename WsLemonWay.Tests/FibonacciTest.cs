@@ -6,7 +6,8 @@ namespace WsLemonWay.Tests
     [TestClass]
     public class FibonacciTest
     {
-        WS_LemonWay ws = new WS_LemonWay();
+        //WS_LemonWay ws = new WS_LemonWay();
+        WsLemonWay.WS_LemonWay ws = new WsLemonWay.WS_LemonWay();
 
         [TestMethod]
         public void FibonnaciNumberTestWith100()
@@ -45,7 +46,6 @@ namespace WsLemonWay.Tests
         {
             Assert.AreEqual(ws.Fibonacci(1), 1);
         }
-
 
         [TestMethod]
         public void FibonnaciNumberTestWith2()

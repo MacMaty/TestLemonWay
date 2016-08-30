@@ -1,0 +1,13 @@
+*INFO       2016-08-29 18:51:11,412        MonitoringLogger          Application Start 
+*INFO       2016-08-29 18:51:37,638        MonitoringLogger          Start Fibonacci 
+*DEBUG      2016-08-29 18:51:37,639        MonitoringLogger          Value : 55 
+*INFO       2016-08-29 18:51:37,639        MonitoringLogger          End Fibonacci 
+*INFO       2016-08-29 18:55:57,737        MonitoringLogger          Application Start 
+*INFO       2016-08-29 18:56:06,898        MonitoringLogger          Start Fibonacci 
+*INFO       2016-08-29 18:56:06,898        MonitoringLogger          End Fibonacci 
+*INFO       2016-08-29 19:00:54,328        MonitoringLogger          Application Start 
+*INFO       2016-08-29 19:01:03,157        MonitoringLogger          Start Fibonacci 
+*INFO       2016-08-29 19:01:03,157        MonitoringLogger          End Fibonacci 
+*INFO       2016-08-29 19:28:14,849        MonitoringLogger          Application Start 
+*INFO       2016-08-29 19:28:23,773        MonitoringLogger          Start Fibonacci 
+*INFO       2016-08-29 19:28:23,773        MonitoringLogger          End Fibonacci 

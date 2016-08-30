@@ -47,6 +47,7 @@ namespace WsLemonWay
                 {
                     Log.MonitoringLogger.Error(message);
                 }
+                
                 throw new ArgumentOutOfRangeException("n", message);
             }
 
@@ -66,6 +67,10 @@ namespace WsLemonWay
         [WebMethod]
         public string XMLToJSON(string xml)
         {
+            if (Log.MonitoringLogger.IsInfoEnabled)
+            {
+                Log.MonitoringLogger.Info("Start XMLToJson");
+            }
             try
             {
                 XmlDocument document = new XmlDocument();
@@ -75,24 +80,16 @@ namespace WsLemonWay
                 // Convert XML to Json format
                 string jsonText = JsonConvert.SerializeXmlNode(document, Newtonsoft.Json.Formatting.Indented);
 
+                if (Log.MonitoringLogger.IsInfoEnabled)
+                {
+                    Log.MonitoringLogger.Info("End XMLToJson");
+                }
+
                 return jsonText;
             }
             catch (XmlException)
             {
                 return "Bad Xml format";
-            }
-        }
-
-
-        public  int NthFibonacciNumber(int n)
-        {
-            if ((n == 0) || (n == 1))
-            {
-                return n;
-            }
-            else
-            {
-                return (NthFibonacciNumber(n - 1) + NthFibonacciNumber(n - 2));
             }
         }
     }
