@@ -14,7 +14,7 @@ Procédure pour publier un services web et le consulter :
     
 3) Créer un dossier sur votre ordinateur/ ou serveur
 
-4) Publier le services web dans le dossier ci-dessus 
+4) Publier le services web dans le dossier que vous choisirez
 
 ![2016-08-27_12h04_42](https://cloud.githubusercontent.com/assets/5879425/18026813/5ce21910-6c52-11e6-8518-cb5182411637.png)
 
@@ -24,7 +24,7 @@ Procédure pour publier un services web et le consulter :
 
 5) Dans le gestionnaire IIS, aller dans le navigateur, clique droit sur Sites et ajouter un site Web
 
-6) Attacher le pool d'application créé auparavant, nommer le site et definir le chemin d'accès physique (lieu ou vous avez publié le service), définir le port (20558)
+6) Attacher le pool d'application créé auparavant, nommer le site et definir le chemin d'accès physique (lieu où vous avez publié le service), définir le port (exemple 20558) !! Attention le port 80 et 21 sont généralement utilsés par d'autres applications
 
 ![2016-08-27_12h07_07](https://cloud.githubusercontent.com/assets/5879425/18026841/0755aa06-6c53-11e6-9ad0-279b9fd4a8c4.png)
 
@@ -34,12 +34,12 @@ Consulter le service via un client
 
 ![2016-08-27_12h17_32](https://cloud.githubusercontent.com/assets/5879425/18026843/1f461466-6c53-11e6-87fb-0a892af5bec4.png)
 
-  - Aller dans Avancé.., Ajouter une référence web tout en bas 
+  - Aller dans Avancé.., Ajouter une référence web (tout en bas)
   
 ![2016-08-27_12h17_44](https://cloud.githubusercontent.com/assets/5879425/18026845/2a7a6c06-6c53-11e6-9635-e49fd2ab2313.png)
 
 Mettre l'URL que vous avez créer dans le gestionnaire IIS exemple : (http://localhost:20558/WS_LemonWay.asmx)
-Nommer la référence Web (WSLemonWay)
+Nommer la référence Web (exemple : WSLemonWay)
 
 ![2016-08-27_12h18_16](https://cloud.githubusercontent.com/assets/5879425/18026849/4d0d6692-6c53-11e6-927a-80aaa6691b28.png)  
 
